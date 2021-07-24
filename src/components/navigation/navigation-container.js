@@ -8,8 +8,8 @@ const NavigationContainer = (props) => {
   const dyanmicLink = (route, linkText) => {
     return (
       <div className="nav-link-wrapper">
-        <NavLink to="/blog" activeClassName="nav-link-active">
-          Blog
+        <NavLink to={route} activeClassName="nav-link-active">
+          {linkText}
         </NavLink>
       </div>
     );
@@ -51,7 +51,14 @@ const NavigationContainer = (props) => {
           </NavLink>
         </div>    
 
-        {props.loggedInStatus === "LOGGED_IN" ? dyanmicLink("/blog", "Blog") : null}
+        <div className="nav-link-wrapper">
+          <NavLink to="/blog" activeClassName="nav-link-active">
+            Blog
+          </NavLink>
+        </div>
+
+        {props.loggedInStatus === "LOGGED_IN" ? 
+        dyanmicLink("/portfolio-manager", "Portfolio Manager") : null}
         
       </div>
 

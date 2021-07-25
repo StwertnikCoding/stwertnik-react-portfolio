@@ -87,14 +87,15 @@ handleSubmit(event) {
                 onChange={this.handleChange}
                 />
 
-                <input 
-                type="text"
+                <select 
                 name="category"
-                placeholder="Category"
                 value={this.state.category}
                 onChange={this.handleChange}
-                />
-            
+                >
+                  <option value="eCommerce">eCommerce</option>
+                  <option value="Education">Education</option>
+                  <option value="SocialMedia">Social Media</option>
+                </select>
             </div>
 
             <div>

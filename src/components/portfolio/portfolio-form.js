@@ -29,6 +29,9 @@ export default class PortfolioForm extends Component {
     this.handleBannerDrop = this.handleBannerDrop.bind(this);
     this.handleLogoDrop = this.handleLogoDrop.bind(this);
 
+    this.thumbRef = React.createRef();
+    this.bannerRef = React.createRef();
+    this.logoRef = React.createRef();
   }
 
   handleThumbDrop() {
@@ -105,7 +108,22 @@ handleSubmit(event) {
     this.buildForm(), 
     { withCredentials: true }
     ).then(response => {
-        this.props.handleSuccessfulFormSubmission(response.data.portfolio_item)
+        this.props.handleSuccessfulFormSubmission(response.data.portfolio_item);
+
+        this.setState ({
+          name: "",
+          description: "",
+          category: "eCommerce",
+          position: "",
+          url: "",
+          thumb_image: "",
+          banner_image: "",
+          logo: ""
+      });
+
+        [this.thumbRef, this.bannerRef, this.logoRef].forEach(ref => {
+          ref.current.dropzone.removeAllFiles();
+        })
     }).catch(error => {
         console.log("portfolio form handleSubmit error", error);
     })
@@ -170,6 +188,7 @@ handleSubmit(event) {
             
             <div className="image-uploaders">
               <DropzoneComponent 
+              ref={this.thumbRef}
               config={this.componentConfig()}
               djsConfig={this.djsConfig()}
               eventHandlers={this.handleThumbDrop()}
@@ -178,6 +197,7 @@ handleSubmit(event) {
               </DropzoneComponent>
 
               <DropzoneComponent 
+              ref={this.bannerRef}
               config={this.componentConfig()}
               djsConfig={this.djsConfig()}
               eventHandlers={this.handleBannerDrop()}
@@ -186,6 +206,7 @@ handleSubmit(event) {
               </DropzoneComponent>
 
               <DropzoneComponent 
+              ref={this.logoRef}
               config={this.componentConfig()}
               djsConfig={this.djsConfig()}
               eventHandlers={this.handleLogoDrop()}

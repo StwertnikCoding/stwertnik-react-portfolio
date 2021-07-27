@@ -15,10 +15,10 @@ export default class PortfolioManager extends Component {
     this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);
   }
 
-handleSuccessfulFormSubmission(porfolioItem) {
-  // TODO
-  //UPDATE portfolioItems state
-  // add portfolioItem to the list
+handleSuccessfulFormSubmission(portfolioItem) {
+  this.setState({
+    portfolioItems: [portfolioItem].concat(this.state.portfolioItems)
+  });
 }
 
 handleFormSubmissionError(error) {
@@ -26,7 +26,7 @@ handleFormSubmissionError(error) {
 }
 
 getPortfolioItems() {
-    axios.get("https://tylerstwertnik.devcamp.space/portfolio/portfolio_items", 
+    axios.get("https://tylerstwertnik.devcamp.space/portfolio/portfolio_items?order_by=created_at&direction=desc", 
     { withCredentials: true })
     .then(response => {
         this.setState({

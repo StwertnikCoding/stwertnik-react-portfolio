@@ -45,7 +45,7 @@ handleSubmit(event) {
     this.buildForm(), 
     { withCredentials: true }
     ).then(response => {
-        console.log("response", response);
+        this.props.handleSuccessfulFormSubmission(response.data.portfolio_item)
     }).catch(error => {
         console.log("portfolio form handleSubmit error", error);
     })

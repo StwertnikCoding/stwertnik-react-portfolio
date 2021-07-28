@@ -1,7 +1,6 @@
 .portfolio-form-wrapper {
-    display: grid;
+    @include base-grid();
     grid-template-columns: 1fr;
-    grid-gap: 21px;
     padding: 42px;
 
     background-color: $midred;
@@ -9,5 +8,19 @@
     @include input-element();
     input {
         margin-bottom: 0px;
+    }
+
+    .image-uploaders  {
+        @include base-grid();
+        grid-template-columns: 200px 200px 200px;
+        background-color: $midred;
+        color: black;
+        
+
+        .dz-message {
+            align-items: center;
+            font-family: 'Russo One', sans-serif;
+            font-size: 0.8rem;
+        }
     }
 }

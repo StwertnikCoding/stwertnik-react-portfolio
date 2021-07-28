@@ -184,14 +184,16 @@ handleSubmit(event) {
                 />
             </div>
             
-            <div className="image-uploaders three-column">
+            <div className="image-uploaders">
               <DropzoneComponent 
               ref={this.thumbRef}
               config={this.componentConfig()}
               djsConfig={this.djsConfig()}
               eventHandlers={this.handleThumbDrop()}
               >
-                
+                <div className="dz-message">
+                  Upload Thumbnail
+                </div>
               </DropzoneComponent>
 
               <DropzoneComponent 
@@ -200,7 +202,9 @@ handleSubmit(event) {
               djsConfig={this.djsConfig()}
               eventHandlers={this.handleBannerDrop()}
               >
-                
+                <div className="dz-message">
+                  Upload Banner
+                </div>
               </DropzoneComponent>
 
               <DropzoneComponent 
@@ -209,12 +213,14 @@ handleSubmit(event) {
               djsConfig={this.djsConfig()}
               eventHandlers={this.handleLogoDrop()}
               >
-                
+                <div className="dz-message">
+                  Upload Logo
+                </div>
               </DropzoneComponent>
             </div>
 
             <div>
-                <button type="submit">Save</button>
+                <button className="btn" type="submit">Send</button>
             </div>
 
         </form>

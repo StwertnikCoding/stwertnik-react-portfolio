@@ -2,6 +2,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - 84px);
+    color: $offwhite;
+    
+    
+    @include input-element();
+    
 
     .left-column {
         background-size: cover;
@@ -13,5 +18,7 @@
         align-items: center;
         background-color: $midred;
         color: $offwhite;
+
+        
     }
 }

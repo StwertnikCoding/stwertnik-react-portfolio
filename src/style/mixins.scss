@@ -17,3 +17,25 @@
         background-color: #6f0000;
     }
 }
+
+@mixin input-element {
+    input{
+        font-family: 'Russo One', sans-serif;
+        color: $offwhite;
+        padding: 5px 0px;
+        width: 100%;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid $offwhite;
+        background-color: $midred;
+        transition: 0.5s all ease-in-out;
+        font-size: 1.1em;
+        margin-bottom: 21px; 
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid $darkred;
+        }
+    }
+}

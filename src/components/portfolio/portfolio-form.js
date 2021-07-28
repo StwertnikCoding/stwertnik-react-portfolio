@@ -133,10 +133,7 @@ handleSubmit(event) {
 
   render() {
     return (
-      <div>
-        <h1>Portfolio Form...</h1>
-
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="portfolio-form-wrapper">
             <div>
                 <input 
                 type="text"
@@ -220,7 +217,6 @@ handleSubmit(event) {
             </div>
 
         </form>
-      </div>
     );
   }
 }

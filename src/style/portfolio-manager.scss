@@ -3,13 +3,13 @@
     grid-template-columns: 3fr 1fr;
 
     .left-column {
-        background-color: $darkred;
+        background-color: $midred;
         color: $offwhite;
 
     }
 
     .right-column{
-        background-color: $midred;
+        background-color: $darkred;
         color: $offwhite;
     }
 }

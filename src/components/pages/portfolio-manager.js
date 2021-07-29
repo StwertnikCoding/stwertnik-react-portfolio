@@ -25,7 +25,7 @@ handleDeleteClick(portfolioItem) {
       })
     })
     return response.data;
-  }).catch(errpr => {
+  }).catch(error => {
     console.log("handleDeleteClick error", error)
   });
 }

@@ -17,7 +17,7 @@ const PortfolioSidebarList = (props) => {
                     </a>       
                 </div>
             </div>
-        )
+        ) 
     })
 
     return <div className="portfolio-sidebar-list-wrapper">{portfolioList}</div>

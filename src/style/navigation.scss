@@ -13,8 +13,10 @@
     .right-side {
         a {
             margin-left: 15px;
+            margin-top: 10px;
             cursor: pointer;
             transition: 0.3s ease-in-out;
+            font-size: 1.2em;
             
             &:hover {
                 color: $warning;

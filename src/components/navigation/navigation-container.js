@@ -67,7 +67,7 @@ const NavigationContainer = (props) => {
         TYLER STWERTNIK
 
         { props.loggedInStatus === "LOGGED_IN" ? <a onClick={handleSignOut}>
-          <FontAwesomeIcon icon="sign-out-alt" />
+          <FontAwesomeIcon icon="angle-double-right" />
         </a> : null }
       </div>
         

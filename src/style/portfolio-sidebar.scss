@@ -15,15 +15,13 @@
             .title {
                 color: $offwhite;
                 font-size: 1.5em;
-                margin-right: 15px;
-                padding-right: 15px;
+                margin-right: 50px;
             }
 
             .actions {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                margin-left: 20px;
-                padding-left: 10px;
+                grid-gap: 20px;
                 
 
                 .action-icon {

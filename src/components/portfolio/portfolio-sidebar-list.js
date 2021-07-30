@@ -22,6 +22,7 @@ const PortfolioSidebarList = (props) => {
                                 <FontAwesomeIcon icon="pen" />
                             </a>
                         </div>
+                        
                         <div className="actions">
                             <a 
                             className="action-icon" 

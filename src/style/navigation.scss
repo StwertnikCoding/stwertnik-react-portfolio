@@ -10,6 +10,18 @@
         display: flex;
     }
 
+    .right-side {
+        a {
+            margin-left: 15px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            
+            &:hover {
+                color: $warning;
+            }
+        }
+    }
+
     .nav-link-wrapper {
         height: 22px;
         border-bottom: 1px solid transparent;

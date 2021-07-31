@@ -24,6 +24,23 @@
                 border-radius: 5px;
 
             }
+
+            .image-removal-link{
+                display: flex;
+                justify-content: center;
+                a{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: $offwhite;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        font-size: 1.5rem;
+                        color: $warning;
+                    }
+                }
+            }
         }
         
         .dz-message {

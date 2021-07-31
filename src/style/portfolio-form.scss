@@ -16,7 +16,16 @@
         background-color: $midred;
         color: black;
         
+        .portfolio-manager-image-wrapper {
+            img {
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 5px;
 
+            }
+        }
+        
         .dz-message {
             align-items: center;
             font-family: 'Russo One', sans-serif;

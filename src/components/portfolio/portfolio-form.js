@@ -19,7 +19,7 @@ export default class PortfolioForm extends Component {
       banner_image: "",
       logo: "",
       editMode: false,
-      apiUrl: "https://jordan.devcamp.space/portfolio/portfolio_items",
+      apiUrl: "https://tylerstwertnik.devcamp.space/portfolio/portfolio_items",
       apiAction: "post"
     };
 
@@ -60,7 +60,7 @@ export default class PortfolioForm extends Component {
         position: position || "",
         url: url || "",
         editMode: true,
-        apiUrl: `https://jordan.devcamp.space/portfolio/portfolio_items/${id}`,
+        apiUrl: `https://tylerstwertnik.devcamp.space/portfolio/portfolio_items/${id}`,
         apiAction: "patch"
       });
     }
@@ -137,7 +137,11 @@ export default class PortfolioForm extends Component {
       withCredentials: true
     })
       .then(response => {
-        this.props.handleSuccessfulFormSubmission(response.data.portfolio_item);
+        if (this.state.editMode) {
+          this.props.handleEditFormSubmission();
+        } else {
+          this.props.handleNewFormSubmission(response.data.portfolio_item);
+        }
 
         this.setState({
           name: "",
@@ -147,7 +151,10 @@ export default class PortfolioForm extends Component {
           url: "",
           thumb_image: "",
           banner_image: "",
-          logo: ""
+          logo: "",
+          editMode: false,
+          apiUrl: "https://tylerstwertnik.devcamp.space/portfolio/portfolio_items",
+          apiAction: "post"
         });
 
         [this.thumbRef, this.bannerRef, this.logoRef].forEach(ref => {
@@ -199,7 +206,7 @@ export default class PortfolioForm extends Component {
           >
             <option value="eCommerce">eCommerce</option>
             <option value="Education">Scheduling</option>
-            <option value="SocialMedia">Social Media </option>
+            <option value="SocialMedia">Social Media</option>
           </select>
         </div>
 

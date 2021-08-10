@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 export default class BlogDetail extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -13,12 +13,18 @@ export default class BlogDetail extends Component {
 
   getBlogItem() {
     axios
-    .get(`https://tylerstwertnik.devcamp.space/portfolio/portfolio_blogs/${this.state.currentId}`
-    ).then(response => {
-      console.log("response", response);
-    }).catch(error => {
-      console.log("getBlogItem error", error);
-    })
+      .get(
+        `https://tylerstwertnik.devcamp.space/portfolio/portfolio_blogs/${this.state
+          .currentId}`
+      )
+      .then(response => {
+        this.setState({
+          blogItem: response.data.portfolio_blog
+        });
+      })
+      .catch(error => {
+        console.log("getBlogItem error", error);
+      });
   }
 
   componentDidMount() {
@@ -26,12 +32,18 @@ export default class BlogDetail extends Component {
   }
 
   render() {
-    console.log("currentId", this.state.currentId);
+    const {
+      title,
+      content,
+      featured_image_url,
+      blog_status
+    } = this.state.blogItem;
+
     return (
       <div>
-        <h1>
-            Blog Detail Component
-        </h1>
+        <h1>{title}</h1>
+        <img src={featured_image_url} />
+        <div>{content}</div>
       </div>
     );
   }

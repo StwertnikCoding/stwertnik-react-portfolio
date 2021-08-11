@@ -9,6 +9,22 @@
         display: flex;
         flex-direction: column;
         width: 800px;
+
+        a {
+            text-decoration: none;
+            color: $offwhite;
+            transition: 0.3s ease-in-out;
+            
+
+            &:hover {
+                color: #AFAFAF;
+                
+            }
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
         
         .featured-image-wrapper {
             img {
@@ -17,6 +33,8 @@
                 height: 350px;
                 border-radius: 5px;
                 object-fit: cover;
+                border: 2px solid $darkred;
+                box-shadow: grey;
             }
         }
     }

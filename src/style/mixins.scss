@@ -18,6 +18,27 @@
     }
 }
 
+@mixin other-btn {
+    cursor: pointer;
+    height: 42px;
+    font-size: 1em;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    background-color: $darkred;
+    color: $offwhite;
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: #530000;
+    }
+}
+
 @mixin input-element {
     input{
         font-family: 'Russo One', sans-serif;

@@ -1,3 +1,7 @@
 .btn {
     @include base-btn();
 }
+
+.other-btn {
+    @include other-btn();
+}

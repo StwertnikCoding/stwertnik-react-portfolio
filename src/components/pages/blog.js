@@ -16,11 +16,16 @@ export default class Blog extends Component {
         this.activateInfiniteScroll();
     }
 
-    activateInfiniteScroll () {
+    activateInfiniteScroll() {
         window.onscroll = () => {
-            console.log("onscroll")
-        }
-    }
+          if (
+            window.innerHeight + document.documentElement.scrollTop ===
+            document.documentElement.offsetHeight
+          ) {
+            console.log("get more posts");
+          }
+        };
+      }
 
     getBlogItems() {
         axios

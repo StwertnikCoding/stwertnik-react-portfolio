@@ -42,14 +42,15 @@ export default class BlogForm extends Component {
         { withCredentials: true }
       )
       .then(response => {
-        this.props.handleSuccessfullFormSubmission(
-          response.data.portfolio_blog
-        );
-
         this.setState({
           title: "",
-          blog_status: ""
+          blog_status: "",
+          content: ""
         });
+
+        this.props.handleSuccessfulFormSubmission(
+          response.data.portfolio_blog
+        );
       })
       .catch(error => {
         console.log("handleSubmit for blog error", error);
@@ -91,7 +92,7 @@ export default class BlogForm extends Component {
           />
         </div>
 
-        <button className="btn">Save</button>
+        <button className="other-btn">Save</button>
       </form>
     );
   }

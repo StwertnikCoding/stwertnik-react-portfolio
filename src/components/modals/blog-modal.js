@@ -18,8 +18,8 @@ export default class BlogModal extends Component {
               transform: "translate(-50%, -50%)" ,
               width: "800px",
               color: "$offwhite",
-              backgroundColor: "#230000",
-              height: "185px"
+              backgroundColor: "#230000"
+              
           },
           overlay: {
               backgroundColor: "rgba(20, 1, 1, 0.80)"

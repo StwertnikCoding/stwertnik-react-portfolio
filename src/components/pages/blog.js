@@ -94,7 +94,7 @@ class Blog extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", onScroll, false);
+    window.removeEventListener("scroll", this.onScroll, false);
   }
 
   render() {

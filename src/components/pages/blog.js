@@ -112,7 +112,7 @@ class Blog extends Component {
 
         <div className="new-blog-link">
           <a onClick={this.handleNewBlogClick}>
-            Icon Here LOL
+            <FontAwesomeIcon icon="plus" />
           </a>
         </div>
         <div className="content-container">{blogRecords}</div>

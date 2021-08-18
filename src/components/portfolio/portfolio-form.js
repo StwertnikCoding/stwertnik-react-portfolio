@@ -238,7 +238,7 @@ export default class PortfolioForm extends Component {
             value={this.state.description}
             onChange={this.handleChange}
           />
-        </div>
+        </div> 
 
         <div className="image-uploaders">
           {this.state.thumb_image_url && this.state.editMode ? (

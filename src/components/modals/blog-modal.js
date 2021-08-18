@@ -19,7 +19,7 @@ export default class BlogModal extends Component {
               width: "800px",
               color: "$offwhite",
               backgroundColor: "#230000",
-              height: "80%"
+              height: "81%"
               
           },
           overlay: {

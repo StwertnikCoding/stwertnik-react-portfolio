@@ -19,14 +19,16 @@ export default class BlogDetail extends Component {
   }
 
   handleEditClick() {
+    console.log("handle edit clicked");
     this.setState({ editMode: true });
   }
 
   getBlogItem() {
     axios
       .get(
-        `https://tylerstwertnik.devcamp.space/portfolio/portfolio_blogs/${this.state
-          .currentId}`
+        `https://tylerstwertnik.devcamp.space/portfolio/portfolio_blogs/${
+          this.state.currentId
+        }`
       )
       .then(response => {
         this.setState({
@@ -52,27 +54,22 @@ export default class BlogDetail extends Component {
 
     const contentManager = () => {
       if (this.state.editMode) {
-        return <BlogForm />
+        return (
+          <BlogForm editMode={this.state.editMode} blog={this.state.blogItem} />
+        );
       } else {
-          return (
-            <div className="content-container">
+        return (
+          <div className="content-container">
+            <h1 onClick={this.handleEditClick}>{title}</h1>
 
-              <h1 onClick={this.handleEditClick}>{title}</h1>
+            <BlogFeaturedImage img={featured_image_url} />
 
-              <BlogFeaturedImage img={featured_image_url} />
-              
-              <div className="content">
-                <div>{ReactHtmlParser(content)}</div>
-              </div>
-            </div>
-        )
+            <div className="content">{ReactHtmlParser(content)}</div>
+          </div>
+        );
       }
-    }
+    };
 
-    return (
-      <div className="blog-container">
-        {contentManager()}
-      </div>
-    );
+    return <div className="blog-container">{contentManager()}</div>;
   }
 }

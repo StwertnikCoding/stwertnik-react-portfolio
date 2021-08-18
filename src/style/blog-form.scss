@@ -9,7 +9,13 @@
 
     input {
         margin-bottom: 0px;
-        // background-color: $offwhite;
-        // color: $darkred;
+    }
+
+    .featured-image-uploader {
+        @include base-grid();
+        grid-template-columns: 200px;
+        background-color: $midred;
+        font-family: 'Russo One', sans-serif;
+        color: black;
     }
 }

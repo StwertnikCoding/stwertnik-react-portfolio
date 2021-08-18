@@ -3,10 +3,13 @@
     grid-template-columns: 1fr;
     padding: 42px; 
 
-    background-color: $midred;
+    background-color: $offwhite;
 
     @include input-element();
+
     input {
         margin-bottom: 0px;
+        background-color: $offwhite;
+        color: $darkred;
     }
 }

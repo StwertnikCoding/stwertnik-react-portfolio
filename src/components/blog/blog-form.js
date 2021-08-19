@@ -44,20 +44,20 @@ export default class BlogForm extends Component {
       iconFiletypes: [".jpg", ".png"],
       showFiletypeIcon: true,
       postUrl: "https://httpbin.org/post"
-    }
+    };
   }
 
   djsConfig() {
     return {
       addRemoveLinks: true,
       maxFiles: 1
-    }
+    };
   }
 
   handleFeaturedImageDrop() {
     return {
       addedfile: file => this.setState({ featured_image: file })
-    }
+    };
   }
 
   handleRichTextEditorChange(content) {
@@ -73,8 +73,9 @@ export default class BlogForm extends Component {
 
     if (this.state.featured_image) {
       formData.append(
-        "portfolio_blog[featured_image]", 
-        this.state.featured_image);
+        "portfolio_blog[featured_image]",
+        this.state.featured_image
+      );
     }
 
     return formData;
@@ -88,7 +89,6 @@ export default class BlogForm extends Component {
         { withCredentials: true }
       )
       .then(response => {
-        
         if (this.state.featured_image) {
           this.featuredImageRef.current.dropzone.removeAllFiles();
         }
@@ -100,7 +100,7 @@ export default class BlogForm extends Component {
           featured_image: ""
         });
 
-        this.props.handleSuccessfulFormSubmission(
+        this.props.handleSuccessfullFormSubmission(
           response.data.portfolio_blog
         );
       })
@@ -142,26 +142,36 @@ export default class BlogForm extends Component {
           <RichTextEditor
             handleRichTextEditorChange={this.handleRichTextEditorChange}
             editMode={this.props.editMode}
-            contentToEdit={ 
-              this.props.editMode 
-              && this.props.blog.content 
-              ? this.props.blog.content 
-              : null}
+            contentToEdit={
+              this.props.editMode && this.props.blog.content
+                ? this.props.blog.content
+                : null
+            }
           />
         </div>
 
-        <div className="featured-image-uploader">
-          <DropzoneComponent
-            ref={this.featuredImageRef}
-            config={this.componentConfig()}
-            djsConfig={this.djsConfig()}
-            eventHandlers={this.handleFeaturedImageDrop()}
-          >
-            <div className="dz-message">Featured Image</div>
-          </DropzoneComponent>
+        <div className="image-uploaders">
+          {this.props.editMode && this.props.blog.featured_image_url ? (
+            <div className="portfolio-manager-image-wrapper">
+              <img src={this.props.blog.featured_image_url} />
+
+              <div className="image-removal-link">
+                <a>Remove file</a>
+              </div>
+            </div>
+          ) : (
+            <DropzoneComponent
+              ref={this.featuredImageRef}
+              config={this.componentConfig()}
+              djsConfig={this.djsConfig()}
+              eventHandlers={this.handleFeaturedImageDrop()}
+            >
+              <div className="dz-message">Featured Image</div>
+            </DropzoneComponent>
+          )}
         </div>
 
-        <button className="other-btn">Save</button>
+        <button className="btn">Save</button>
       </form>
     );
   }

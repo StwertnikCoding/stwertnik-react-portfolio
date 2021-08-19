@@ -152,7 +152,7 @@ export default class BlogForm extends Component {
 
         <div className="image-uploaders">
           {this.props.editMode && this.props.blog.featured_image_url ? (
-            <div className="portfolio-manager-image-wrapper">
+            <div className="manager-image-wrapper">
               <img src={this.props.blog.featured_image_url} />
 
               <div className="image-removal-link">

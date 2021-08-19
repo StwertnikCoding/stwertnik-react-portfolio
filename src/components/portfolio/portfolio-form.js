@@ -263,7 +263,7 @@ export default class PortfolioForm extends Component {
           )}
 
           {this.state.banner_image_url && this.state.editMode ? (
-            <div className="portfolio-manager-image-wrapper">
+            <div className="manager-image-wrapper">
               <img src={this.state.banner_image_url} />
 
               <div className="image-removal-link">

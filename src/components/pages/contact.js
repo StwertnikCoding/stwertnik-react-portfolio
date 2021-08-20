@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class ContactPage extends Component {
   render() {
@@ -14,7 +15,7 @@ export default class ContactPage extends Component {
         <div className="right-column-wrapper">
             <div className="contact-info-wrapper">
                 <div className="contact-icon-wrapper">
-
+                    <FontAwesomeIcon icon="code" />
                 </div>
 
                 <div className="contact-email-wrapper">
@@ -24,7 +25,7 @@ export default class ContactPage extends Component {
 
             <div className="contact-info-wrapper">
                 <div className="contact-icon-wrapper">
-
+                    <FontAwesomeIcon icon="compact-disc" />
                 </div>
 
                 <div className="contact-email-wrapper">

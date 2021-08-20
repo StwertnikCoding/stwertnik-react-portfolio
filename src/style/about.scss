@@ -3,12 +3,13 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
+    height: calc(100vh - 84px);
 
     .left-column-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        
         padding-left: 30px;
     
         .about-image-wrapper {
@@ -40,7 +41,7 @@
         padding: 30px;
 
         .bio-wrapper {
-            display: flex;
+            display: column;
             justify-content: center;
             align-items: center;
             text-align: center;

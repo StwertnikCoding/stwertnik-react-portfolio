@@ -11,8 +11,9 @@ export default class AboutPage extends Component {
           </div>
           <div className="right-column-wrapper">
             <div className="bio-wrapper">
-                <p>
+                
                         Hi! My name is Tyler Stwertnik, and I'm from Denver, Colorado.
+                <p>        
                     This is my react portfolio, which I built with the help of my college to showcase
                     and display any and all React applications I build. I also implemented a manager,
                     authorization, and a blog element.

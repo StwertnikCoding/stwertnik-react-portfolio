@@ -1,0 +1,29 @@
+.contact-page-wrapper {
+    @include page-wrapper();
+
+    .contact-image-wrapper {
+        @include image-wrapper();
+
+        .contact-image{
+            @include image-styles();
+        }
+    }
+
+    .contact-info-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+        .contact-icon-wrapper {
+            padding-right: 10px;
+            font-size: 1.2em;
+            transition: 0.3s ease-in-out;
+
+
+            &:hover {
+                color: $warning;
+            }
+        }
+    }
+}

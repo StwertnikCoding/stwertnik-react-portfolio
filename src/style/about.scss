@@ -1,33 +1,17 @@
 .about-page-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    align-items: center;
-    height: calc(100vh - 84px);
+    @include page-wrapper();
 
     .left-column-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        padding-left: 30px;
+        width: 50vw;
     
         .about-image-wrapper {
-            width: 100%;
+            @include image-wrapper();
 
             .about-image{
-                height: 80vh;
-                width: 100%;
-                border: 1px solid $offwhite;
-                box-shadow: 1px 3px 2px  $offwhite;
-                transition: 0.3s ease-in-out;
-                border-radius: 10px;
-
-                &:hover {
-                    border: 1px solid $chransengreen;
-                    box-shadow: 1px 3px 2px $chransengreen;
-                    border-radius: 15px;
-                }
+                @include image-styles();
             }
         }
     }
@@ -36,9 +20,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        width: 50vw;
-        padding: 30px;
+        height: calc(100vh - 84px);
+        width: 45vw;
+        padding: 15px;
 
         .bio-wrapper {
             display: column;

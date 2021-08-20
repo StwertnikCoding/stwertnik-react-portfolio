@@ -35,11 +35,11 @@ export default class ContactPage extends Component {
 
             <div className="contact-info-wrapper">
                 <div className="contact-icon-wrapper">
-                    <FontAwesomeIcon icon={['fab', 'instagram']} />
+                    <FontAwesomeIcon icon={['fab', 'github-alt']} />
                 </div>
 
                 <a 
-                    className="contact-link-wrapper"
+                    className="github-link-wrapper"
                     href='https://github.com/StwertnikCoding'
                 >
                     GitHub
@@ -48,11 +48,11 @@ export default class ContactPage extends Component {
 
             <div className="contact-info-wrapper">
                 <div className="contact-icon-wrapper">
-                    <FontAwesomeIcon icon="compact-disc" />
+                    <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
                 </div>
 
                 <a 
-                    className="contact-link-wrapper"
+                    className="linkedin-link-wrapper"
                     href='https://www.linkedin.com/in/tyler-stwertnik-2989b7192/'
                 >
                     Linkedin

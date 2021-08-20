@@ -33,10 +33,20 @@
             padding-right: 250px;
         }
 
-        .contact-link-wrapper {
-            text-decoration: none;
-            color: $offwhite;
-            padding-right: 250px;
+        .github-link-wrapper {
+            @include link-wrapper();
+
+            &:hover {
+                color: #7DBBE6;
+            }
+        }
+
+        .linkedin-link-wrapper {
+            @include link-wrapper();
+
+            &:hover {
+                color: #0E76A8;
+            }
         }
     }
 }

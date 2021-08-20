@@ -95,3 +95,14 @@
         border-radius: 15px;
     }
 }
+
+@mixin link-wrapper() {
+    text-decoration: none;
+    color: $offwhite;
+    padding-right: 250px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        font-weight: 300;
+    }
+}

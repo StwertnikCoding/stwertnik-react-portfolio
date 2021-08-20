@@ -32,6 +32,32 @@ export default class ContactPage extends Component {
                     chransondub@gmail.com
                 </div>
             </div>
+
+            <div className="contact-info-wrapper">
+                <div className="contact-icon-wrapper">
+                    <FontAwesomeIcon icon={['fab', 'instagram']} />
+                </div>
+
+                <a 
+                    className="contact-link-wrapper"
+                    href='https://github.com/StwertnikCoding'
+                >
+                    GitHub
+                </a>
+            </div>
+
+            <div className="contact-info-wrapper">
+                <div className="contact-icon-wrapper">
+                    <FontAwesomeIcon icon="compact-disc" />
+                </div>
+
+                <a 
+                    className="contact-link-wrapper"
+                    href='https://www.linkedin.com/in/tyler-stwertnik-2989b7192/'
+                >
+                    Linkedin
+                </a>
+            </div>
         </div>
       </div>
     );

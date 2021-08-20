@@ -4,12 +4,12 @@ export default class AboutPage extends Component {
   render() {
     return (
       <div className="about-page-wrapper">
-          <div className="right-column-wrapper">
+          <div className="left-column-wrapper">
             <div className="about-image-wrapper">
                 <img className="about-image" src={require('../../logo/about-image.png')}></img>
             </div>
           </div>
-          <div className="left-column-wrapper">
+          <div className="right-column-wrapper">
             <div className="bio-wrapper">
                 <p>
                     Hi! My name is Tyler Stwertnik, and I'm from Denver, Colorado.
